@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri-Genie App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Nutri-Genie App 🥙</h1>
+    <form id="upload-form" action="/analyse" method="post" enctype="multipart/form-data">
+        <h3>Choose upload method:</h3>
+        <input type="radio" id="upload" name="upload" value="Upload Photo" checked>
+        <label for="upload">Upload Photo</label><br>
+        <input type="radio" id="camera" name="upload" value="Take a Picture">
+        <label for="camera">Take a Picture</label><br><br>
+        <input type="file" id="file" name="file" style="display:none;">
+        <label for="file" class="upload-btn">Select Image</label><br><br>
+        <button type="submit" id="submit" class="upload-btn">Analyse my Meal🍴</button>
+    </form>
+    <div id="output"></div>
+</div>
+<script src="/static/js/script.js"></script>
+</body>
+</html>
